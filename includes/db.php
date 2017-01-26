@@ -1,5 +1,6 @@
 <?php
-$mysqli = new mysqli("127.0.0.1", "root", "258561", "authorization");
-if ($mysqli->connect_errno) {
-    echo "Error connection to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-} 
+require 'libs/rb.php';
+R::setup('mysql:host=localhost;dbname=authorization', 'root', '258561');
+
+session_start();
+?>
